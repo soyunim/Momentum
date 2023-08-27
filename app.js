@@ -5,14 +5,14 @@ const bg = document.body;
 function handleTitleClick(){
     const clickedClass ="clicked";
 
-    if(h1.className === clickedClass){
-        h1.className = "";
-        bg.className = "";
+    if(h1.classList.contains(clickedClass)){
+        h1.classList.remove(clickedClass);
+        bg.classList.remove(clickedClass);
         h1.innerHTML= "Light Mode!";
     }
     else{
-        h1.className = clickedClass;
-        bg.className = clickedClass;
+        h1.classList.add(clickedClass);
+        bg.classList.add(clickedClass);
         h1.innerHTML= "Black Mode!";
     }
 }
