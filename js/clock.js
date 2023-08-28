@@ -5,4 +5,5 @@ function getTime(){
     clock.innerHTML = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 }
 
+getTime();
 setInterval(getTime,1000); //1초마다 getTime실행
