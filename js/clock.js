@@ -2,7 +2,10 @@ const clock = document.querySelector("#clock");
 
 function getTime(){
     const date = new Date();
-    clock.innerHTML = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const hour = String(date.getHours()).padStart(2,"0");
+    const minute = String(date.getMinutes()).padStart(2,"0");
+    const second = String(date.getSeconds()).padStart(2,"0");
+    clock.innerHTML = `${hour}:${minute}:${second}`;
 }
 
 getTime();
