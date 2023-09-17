@@ -9,12 +9,15 @@ function saveToDos(){
 
 function deleteToDo(event){
     const deleteList = event.target.parentElement;
+    // console.log(deleteList.id);
     deleteList.remove();
-    localStorage.removeItem(deleteList.id);
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(deleteList.id));
+    saveToDos();
 }
 
 function paintToDo(newTodo){
     const newList = document.createElement("li");
+    newList.id = newTodo.id;
     const newSpan = document.createElement("span");
     const button = document.createElement("button");
     newSpan.innerHTML=newTodo.text;
@@ -41,5 +44,5 @@ const savedTodos = localStorage.getItem("todos");
 if(savedTodos !== null){
     const parsedTodos = JSON.parse(savedTodos);
     toDos = parsedTodos;
-    parsedTodos.forEach((item) => paintToDo(item));
+    parsedTodos.forEach(paintToDo);
 }

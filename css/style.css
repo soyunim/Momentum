@@ -2,11 +2,29 @@
     display: none;
 }
 
+/* body{
+    background-image: url();
+} */
+
 /* img {
-    position:absolute;
+    position: absolute;
     width:100%;
+    top: 0px;
     left: 0px;
     bottom:0px;
     z-index: -1;
     opacity:80%;
 } */
+
+/* 
+#quote {
+    position: absolute;
+    bottom: 0;
+} 
+*/
+
+#quote span {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+}
